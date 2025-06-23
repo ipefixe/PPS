@@ -1,0 +1,488 @@
+{
+	"info": {
+		"_postman_id": "aebd1c37-a739-4a30-b793-a0dfbba7c4cf",
+		"name": "PPS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43242052",
+		"_collection_link": "https://kevinb-8760548.postman.co/workspace/Kevin-B's-Workspace~bd9f3c17-aed8-4b4c-8ddb-a37cf54baffe/collection/43242052-aebd1c37-a739-4a30-b793-a0dfbba7c4cf?action=share&source=collection_link&creator=43242052"
+	},
+	"item": [
+		{
+			"name": "pps",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{baseURL}}",
+					"host": [
+						"{{baseURL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "race_date",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "0WLCH0IrYopo_vLMXIeWMc774BsvxI431CYsTccVHsDNIAYIPdYERCOi7J2R_ZMHgDWALBrYFOKjESUy8iuaBA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "patch",
+							"type": "text"
+						},
+						{
+							"key": "authenticity_token",
+							"value": "oscMHUi0OUc5IEWhsVW4USBBu0XdY8BoGH61eE02U0VwYUAmpsxrtSTulp3gQa-fQwOeSELGEUllGQMzKDGs5A",
+							"type": "text"
+						},
+						{
+							"key": "course[race_date]",
+							"value": "2025-06-30",
+							"type": "text"
+						},
+						{
+							"key": "button",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/courses/wizards/race_date",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"courses",
+						"wizards",
+						"race_date"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "personal_infos",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "bTI5H3OcUflbOLyLshnyX7X3JCvUYXL7m_HlHae3uWFxcP0IDGE3NxBkotp_Y_dp-zlEHOF96C7sxuxikok9pQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "patch",
+							"type": "text"
+						},
+						{
+							"key": "authenticity_token",
+							"value": "FCprH81ypOlCCyaj-Nydy0Og_Q72laFyoi1qvs4VHWYf4tJolOYYt4INGh8UwcZGQkaPcaBeLLjDUZ-U0oU_5w",
+							"type": "text"
+						},
+						{
+							"key": "course[gender]",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "course[gender]",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "course[last_name]",
+							"value": "Famille",
+							"type": "text"
+						},
+						{
+							"key": "course[first_name]",
+							"value": "prénom",
+							"type": "text"
+						},
+						{
+							"key": "course[birthdate(3i)]",
+							"value": "31",
+							"type": "text"
+						},
+						{
+							"key": "course[birthdate(2i)]",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "course[birthdate(1i)]",
+							"value": "1980",
+							"type": "text"
+						},
+						{
+							"key": "course[email]",
+							"value": "mail@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "button",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/courses/wizards/personal_infos",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"courses",
+						"wizards",
+						"personal_infos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cardiovascular_risks",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "cJaWtwq16Plc_5E3YyhUDpmk0Q5DdMx77l8VOZwQtYls1FKgdUiONxejj2auUlE412qxOXZoVq6ZaBxGqS4xTQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "patch",
+							"type": "text"
+						},
+						{
+							"key": "authenticity_token",
+							"value": "4GPjbGV9ARr3bVTP2sIGmDDlTBi6QTi14J3ghLZJlqm7GbMCnjiVLwke8DoAmIcozDJEhrvlamg03ZjslONjXw",
+							"type": "text"
+						},
+						{
+							"key": "course[cardiovascular_risks_video]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "course[cardiovascular_risks_checkbox]",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "course[cardiovascular_risks_checkbox]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "button",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/courses/wizards/cardiovascular_risks",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"courses",
+						"wizards",
+						"cardiovascular_risks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "risk_factors",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "z4VUqsqnwxaOYN6SLXuco4qTnn_vpvNAUbVEDfjfjn_Tx5C9tVql2MU8wMPgAZmVxF3-SNq6aZUmgk1yzeEKuw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "patch",
+							"type": "text"
+						},
+						{
+							"key": "authenticity_token",
+							"value": "80CxyhP_tcBSoUl_b154we0wcQFpyfMKBSqr6NwsAhLwonRF07SDFb1iXzII5S5-kVMVo6sP5vJVSCN8YpkMNw",
+							"type": "text"
+						},
+						{
+							"key": "course[risk_factors_video]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "course[risk_factors_checkbox]",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "course[risk_factors_checkbox]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "button",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/courses/wizards/risk_factors",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"courses",
+						"wizards",
+						"risk_factors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "precautions",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "UxJYX6_JSZvcjnhUv_TPedGVEi4tt4OdBSeAy9CZhuBPUJxI0DQvVZfSZgVyjspPn1tyGRirGUhyEIm05acCJA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "patch",
+							"type": "text"
+						},
+						{
+							"key": "authenticity_token",
+							"value": "rkjpwKuQrPfqtYNYzYyX_o7kxCfR0C2AfjR6y4uf-FwVl36hivIY27Hj004SKEHqqpTGupKwk5lFGlBg51GKBg",
+							"type": "text"
+						},
+						{
+							"key": "course[precautions_video]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "course[precautions_checkbox]",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "course[precautions_checkbox]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "button",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/courses/wizards/precautions",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"courses",
+						"wizards",
+						"precautions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finalization",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "qoGIwXmPeoQJ8obtaE-HTENwrAFaSDWW1N0N0FQXjky2w0zWBnIcSkKumLylNYJ6Db7MNm9Ur0Oj6gSvYSkKiA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "patch",
+							"type": "text"
+						},
+						{
+							"key": "authenticity_token",
+							"value": "K-SBxw8SY_dJHNoAdAnJSY4DvZQRjvWZqzp0-_9qryZd82kZnfqDs4MwrxM5vfhVEDmK53Hsec5HhQthMqd1KA",
+							"type": "text"
+						},
+						{
+							"key": "course[finalization_checkbox]",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "course[finalization_checkbox]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "course[ffa_newsletter]",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "button",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/courses/wizards/finalization",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"courses",
+						"wizards",
+						"finalization"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://pps.athle.fr",
+			"type": "default"
+		}
+	]
+}
