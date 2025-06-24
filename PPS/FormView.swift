@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct FormView: View {
-    enum Sex: String, CaseIterable, Identifiable {
+    enum Gender: String, CaseIterable, Identifiable {
         case male, female
         var id: Self { self }
     }
 
     @State private var raceDate: Date = .init()
-    @State private var sex: Sex = .male
+    @State private var gender: Gender = .male
     @State private var lastname: String = ""
     @State private var firstname: String = ""
     @State private var birthdate: Date = Date().addingTimeInterval(-1032000000)
     @State private var email: String = ""
+
+    private let service = PPSService()
 
     private var invalidDateRace: Bool {
         guard let dateMin = Calendar.current.date(byAdding: .hour, value: -1, to: Date()),
@@ -63,11 +65,11 @@ struct FormView: View {
                     }
 
                     HStack {
-                        Text("Sex")
+                        Text("Gender")
                         Spacer()
-                        Picker("Sex", selection: $sex) {
-                            Text("Male").tag(Sex.male)
-                            Text("Female").tag(Sex.female)
+                        Picker("Gender", selection: $gender) {
+                            Text("Male").tag(Gender.male)
+                            Text("Female").tag(Gender.female)
                         }
                     }
 
