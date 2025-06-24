@@ -20,6 +20,10 @@ struct FormView: View {
     @State private var birthdate: Date = Date().addingTimeInterval(-1032000000)
     @State private var email: String = ""
 
+    @State private var isLoading: Bool = false
+
+    @State private var ppsCode: String = ""
+
     private let service = PPSService()
 
     private var invalidDateRace: Bool {
@@ -93,11 +97,40 @@ struct FormView: View {
                         .textFieldStyle(.roundedBorder)
 
                     VStack(alignment: .center) {
-                        Button("Generate") {}
+                        if isLoading {
+                            ProgressView()
+                        } else {
+                            Button("Generate") {
+                                Task {
+                                    isLoading = true
+                                    ppsCode = ""
+                                    do {
+                                        ppsCode = try await service.generatePPSCode(raceDate: raceDate,
+                                                                                    gender: gender.rawValue,
+                                                                                    lastname: lastname,
+                                                                                    firstname: firstname,
+                                                                                    birthdate: birthdate,
+                                                                                    email: email)
+                                    } catch {
+                                        print("❌ ERROR == \(error.localizedDescription)")
+                                    }
+                                    isLoading = false
+                                }
+                            }
                             .buttonStyle(.borderedProminent)
                             .disabled(disableGenerateButton)
+                        }
                     }
                     .frame(maxWidth: .infinity)
+
+                    if !ppsCode.isEmpty {
+                        TextField("PPS", text: $ppsCode)
+                            .autocorrectionDisabled()
+                            .textFieldStyle(.plain)
+                            .foregroundStyle(.accent)
+                            .multilineTextAlignment(.center)
+                            .fontWeight(.heavy)
+                    }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }

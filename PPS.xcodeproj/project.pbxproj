@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D447DFE42E0A8F18009E9246 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = D447DFE32E0A8F18009E9246 /* SwiftSoup */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D4AE47632E09538000541BB6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D447DFE42E0A8F18009E9246 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = PPS;
 			packageProductDependencies = (
+				D447DFE32E0A8F18009E9246 /* SwiftSoup */,
 			);
 			productName = PPS;
 			productReference = D4AE47552E09537E00541BB6 /* PPS.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = D4AE474C2E09537E00541BB6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D447DFE22E09A016009E9246 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D4AE47562E09537E00541BB6 /* Products */;
 			projectDirPath = "";
@@ -558,6 +567,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D447DFE22E09A016009E9246 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D447DFE32E0A8F18009E9246 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D447DFE22E09A016009E9246 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4AE474D2E09537E00541BB6 /* Project object */;
 }
